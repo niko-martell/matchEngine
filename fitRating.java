@@ -23,12 +23,23 @@ class fitRating{
 
         if (schol.hasFields(std) > 0){
             int num = schol.hasFields(std);
-            fitR = fitR + 5*num;
+            if(num >= 2){
+                fitR = fitR + 10;
+            }
+            else{
+                fitR = fitR + 5*num;
+            }
+            
         }
 
         if (schol.hasAttributes(std) > 0){
             int num = schol.hasAttributes(std);
-            fitR = fitR + 5*num;
+            if(num >= 2){
+                fitR = fitR + 10;
+            }
+            else{
+                fitR = fitR + 5*num;
+            }
         }
 
         if (schol.hasGPA(std)){
