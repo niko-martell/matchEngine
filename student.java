@@ -13,9 +13,6 @@ public class student {
         year = y;
     }
 
-
-    //funny
-    
     public String getName(){
         return name;
     }
