@@ -5,10 +5,10 @@ class fitRating{
     float gpa = 0;
     int year = 0;
 
-    student niko = new student("niko", "Software Engineering", fields, attributes, gpa, year);
+    Student niko = new Student("niko", "Software Engineering", fields, attributes, gpa, year);
     scholarship test = new scholarship("test", majors, fields, attributes, gpa, year);
 
-    public static float getFitRating(student std, scholarship schol){
+    public static float getFitRating(Student std, scholarship schol){
         float fitR = 0;
 
         // Major = 50%
