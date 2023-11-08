@@ -1,3 +1,5 @@
+
+
 public class Student {
 
     private String name, major, year, graduationDate, email, studentID;
