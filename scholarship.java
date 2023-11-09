@@ -1,17 +1,25 @@
-public class scholarship {
+public class Scholarship {
     private String name;
     private String[] majors;
     private String[] fields, attributes;
     private float gpa;
-    private int year;
+    private String year;
+    private String openDate;
+    private String dueDate;
 
-    public scholarship(String n, String[] m, String[] f, String[] a, float g, int y){
+    public Scholarship() {
+
+    }
+
+    public Scholarship(String n, String[] m, String[] f, String[] a, float g, String y, String od, String dd){
         name = n;
         majors = m;
         fields = f;
         attributes = a;
         gpa = g;
         year = y;
+        openDate=od;
+        dueDate=dd;
     }
 
     public String getName(){
@@ -34,10 +42,16 @@ public class scholarship {
         return gpa;
     }
 
-    public int getYear(){
+    public String getYear(){
         return year;
     }
-
+    public String getOpenDate(){
+        return openDate;
+    }
+    public String getDueDate(){
+        return dueDate;
+    }
+   
     public boolean hasMajor(student n){
         String m = n.getMajor();
         for (String maj : majors){
@@ -88,13 +102,17 @@ public class scholarship {
         }
     }
 
-    public boolean hasYear(student n){
+    public String toString() {
+        return ;
+    }
+
+   /*  public boolean hasYear(student n){
         if (n.getYear() >= this.year){
             return true;
         }
         else{
             return false;
         }
-    }
+    }*/
 
 }

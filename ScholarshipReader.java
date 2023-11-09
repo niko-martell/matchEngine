@@ -24,7 +24,8 @@ public class ScholarshipReader{
 
        
         System.out.println("Reading and printing scholarships.");
-      
+        Scholarship [] sch = new Scholarship[7];
+        int i = 0;
         while(inFs.hasNextLine()){
             String line = inFs.nextLine();
             String [] data =line.split(",");
@@ -40,9 +41,13 @@ public class ScholarshipReader{
                 dd = data[7];
 
                 gpa= new Double(g).doubleValue();
-                
+                Scholarship s = new Scholarship();
+                sch[i] = s;
+                i++;
 
-               System.out.println("Scholarship Name: " + n);
+
+
+               /*System.out.println("Scholarship Name: " + n);
                 System.out.println("Amount: " + String.join(", ", m));
                 System.out.println("Fields: " + String.join(", ", f));
                 System.out.println("Attributes: " + String.join(", ", a));
@@ -51,7 +56,7 @@ public class ScholarshipReader{
                 System.out.println("Year: " + y);
                 System.out.println("Date opened: " + od);
                 System.out.println("Due Date: " + dd);
-                System.out.println();
+                System.out.println();*/
             
             
 
