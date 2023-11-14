@@ -4,6 +4,7 @@ public class Student {
 
     private String name, major, year, graduationDate, email, studentID;
     private boolean transferStudent, funded;
+    private double GPA; 
     private int unitsEnrolled;
 
     // constructor
@@ -77,6 +78,15 @@ public class Student {
     public void setIsFunded(boolean isFunded) {
         funded = isFunded;
     }
+
+    public double getGPA() {
+        return GPA;
+    }
+    public void setGPA(double newGPA) {
+        this.GPA = newGPA;
+    }
+
+    
     // END BOILERPLATE
 
 

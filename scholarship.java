@@ -1,6 +1,6 @@
 public class Scholarship {
     private String name;
-    private String[] majors;
+    private String[] ammount;
     private String[] fields, attributes;
     private float gpa;
     private String year;
@@ -13,7 +13,7 @@ public class Scholarship {
 
     public Scholarship(String n, String[] m, String[] f, String[] a, float g, String y, String od, String dd){
         name = n;
-        majors = m;
+        ammount = m;
         fields = f;
         attributes = a;
         gpa = g;
@@ -26,8 +26,8 @@ public class Scholarship {
         return name;
     }
 
-    public String[] getMajor(){
-        return majors;
+    public String[] getAmmount(){
+        return ammount;
     }
 
     public String[] getFields(){
@@ -52,7 +52,7 @@ public class Scholarship {
         return dueDate;
     }
    
-    public boolean hasMajor(student n){
+    public boolean hasMajor(Student n){
         String m = n.getMajor();
         for (String maj : majors){
             if (maj.equalsIgnoreCase(m)){
@@ -62,7 +62,7 @@ public class Scholarship {
         return false;
     }
 
-    public int hasFields(student n){
+    public int hasFields(Student n){
         String[] f = n.getFields();
         int matches = 0;
         for (String sField : f) {
@@ -78,7 +78,7 @@ public class Scholarship {
         return matches;
     }
 
-    public int hasAttributes(student n){
+    public int hasAttributes(Student n){
         String[] a = n.getAttributes();
         int matches = 0;
         for (String sAtt : a){
@@ -93,7 +93,7 @@ public class Scholarship {
         return matches;
     }
 
-    public boolean hasGPA(student n){
+    public boolean hasGPA(Student n){
         if (n.getGPA() >= this.gpa){
             return true;
         }
@@ -102,11 +102,11 @@ public class Scholarship {
         }
     }
 
-    public String toString() {
-        return ;
-    }
+    //public String toString() {
+    //    return ;
+   // }
 
-   /*  public boolean hasYear(student n){
+   /*  public boolean hasYear(Student n){
         if (n.getYear() >= this.year){
             return true;
         }

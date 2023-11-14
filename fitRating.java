@@ -1,4 +1,4 @@
-class FitRating{
+class fitRating{
     String[] majors = new String[30];
     String[] attributes = new String[30];
     String[] fields = new String[30];
@@ -6,10 +6,10 @@ class FitRating{
     int year = 0;
      
 
-    student niko = new student("niko", "Software Engineering", fields, attributes, gpa, year);
-    Scholarship test = new Scholarship("test", majors, fields, attributes, gpa, year);
+    //Student niko = new Student("niko", "Software Engineering", fields, attributes, gpa, year);
+    //Scholarship test = new Scholarship("test", majors, fields, attributes, gpa, year);
 
-    public static float getFitRating(student std, Scholarship schol){
+    public static float getFitRating(Student std, Scholarship schol){
         float fitR = 0;
 
         // Major = 50%
