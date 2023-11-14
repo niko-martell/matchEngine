@@ -1,17 +1,38 @@
-
+/*
+ * For: SFWE 301 Final Project
+ * Purpose: This class contains the information about Students in the 
+ * 	        UASAMS. There is a string containing the name and attributes 
+ * 			containing information about the student outlined in the 
+ * 			requirements. This class acts as a container for data to be
+ * 			used by the Match Engine to generate a fit rating.
+ * 
+ * Setters are not provided as this information should not change with regards
+ * to the matching engine. 
+ * 
+ */
+import java.util.HashMap;
 
 public class Student {
-
-    private String name, major, year, graduationDate, email, studentID;
-    private boolean transferStudent, funded;
-    private double GPA; 
-    private int unitsEnrolled;
-
-    // constructor
-    public Student(String name, String studentID, String email) {
-        this.name = name;
-        this.studentID = studentID;
-        this.email = email;
+	
+    private String name;
+    private HashMap<String, String> attributes = new HashMap<String, String>(10);
+    
+    /**
+     * @param studentName the name of the student
+     * @param studentAttributes (indices - attribute: 0 - major, 1 - minor, 2 - graduation year, 3 - GPA, 4 - year of study,
+     *  							                  5 - transfer student, 6 - units enrolled, 7 - gender, 8 - race)
+     */
+    public Student(String studentName, String[] studentAttributes) {
+        name = studentName;
+        attributes.put("major", studentAttributes[0]);
+    	attributes.put("minor", studentAttributes[1]);
+    	attributes.put("graduation year", studentAttributes[2]);
+    	attributes.put("GPA", studentAttributes[3]);
+    	attributes.put("year of study", studentAttributes[4]);
+    	attributes.put("transfer student", studentAttributes[5]);
+    	attributes.put("units enrolled", studentAttributes[6]);
+    	attributes.put("gender", studentAttributes[7]);
+    	attributes.put("race", studentAttributes[8]);
     }
 
     // all getters and setters required for both the Scholarship class and the Student class
@@ -19,74 +40,10 @@ public class Student {
     public String getName() {
         return name;
     }
-    public void setName(String newName) {
-        name = newName;
+    public HashMap<String, String> getAttributes() {
+    	return attributes;
     }
-
-    public String getMajor() {
-        return major;
-    }
-    public void setMajor(String newMajor) {
-        major = newMajor;
-    }
-
-    public String getYear() {
-        return year;
-    }
-    public void setYear(String newYear) {
-        year = newYear;
-    }
-
-    public String getGraduationDate() {
-        return graduationDate;
-    }
-    public void setGraduationDate(String newGraduationDate) {
-        graduationDate = newGraduationDate;
-    }
-
-    public String getEamil() {
-        return email;
-    }
-    public void setEmail(String newEmail) {
-        email = newEmail;
-    }
-
-    public String getStudentID() {
-        return studentID;
-    }
-    public void setStudentID(String newStudentID) {
-        studentID = newStudentID;
-    }
-
-    public int getUnitsEnrolled() {
-        return unitsEnrolled;
-    }
-    public void setUnitsEnrolled(int newUnitsEnrolled) {
-        unitsEnrolled = newUnitsEnrolled;
-    }
-
-    public boolean isTransferStudent() {
-        return transferStudent;
-    }
-    public void setIsTransferStudent(boolean isTransferStudent) {
-        transferStudent = isTransferStudent;
-    }
-
-    public boolean isFunded() {
-        return funded;
-    }
-    public void setIsFunded(boolean isFunded) {
-        funded = isFunded;
-    }
-
-    public double getGPA() {
-        return GPA;
-    }
-    public void setGPA(double newGPA) {
-        this.GPA = newGPA;
-    }
-
-    
+   
     // END BOILERPLATE
 
 
