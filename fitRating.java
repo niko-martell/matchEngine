@@ -1,4 +1,4 @@
-class fitRating{
+class FitRating{
     String[] majors = new String[30];
     String[] attributes = new String[30];
     String[] fields = new String[30];
